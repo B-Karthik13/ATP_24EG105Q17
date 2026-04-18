@@ -14,7 +14,7 @@ import {
 } from "../styles/common";
 import { NavLink, useNavigate, useLocation } from "react-router";
 import { useAuth } from "../store/authStore";
-import { useEffect } from "react";
+import { useEffect,useRef } from "react";
 import {toast} from 'react-hot-toast'
 
 function Login() {
@@ -25,19 +25,25 @@ function Login() {
   } = useForm();
 
   const navigate = useNavigate();
+  const hasRedirected = useRef(false);
   //get state from auth store
   const { login, currentUser, loading, error, isAuthenticated } = useAuth((state) => state);
+
   //on user login
   const onUserLogin = (userCredObj) => {
     //call login() of auth store
+    hasRedirected.current = false;
     login(userCredObj);
   };
 
+
+
   useEffect(() => {
     //navigation logic
-    if (isAuthenticated === true) {
+    if (isAuthenticated && currentUser && !hasRedirected.current) {
+      hasRedirected.current = true;
       if (currentUser.role === "USER") {
-        //show cuccess toast
+        //show success toast
         toast.success("Login success and redirecting to User Profile",{duration:2000})
         navigate("/user-profile");
       }
@@ -50,7 +56,7 @@ function Login() {
         navigate("/admin-profile");
       }
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated,currentUser]);
 
   //deal with loading
   if (loading) {

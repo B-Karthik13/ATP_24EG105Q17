@@ -59,6 +59,7 @@ export const useAuth = create((set) => ({
 
 import { create } from "zustand";
 import axios from "axios";
+import api from "../api/axiosInstance";
 
 export const useAuth = create((set) => ({
   currentUser: null,
@@ -128,7 +129,7 @@ export const useAuth = create((set) => ({
       });
     } catch (err) {
       // If user is not logged in → do nothing
-      if (err.response?.status === 401) {
+      if (err.response?.status === 401|| err.response?.status === 403) {
         set({
           currentUser: null,
           isAuthenticated: false,
