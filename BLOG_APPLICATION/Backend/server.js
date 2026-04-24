@@ -16,7 +16,8 @@ const app=exp()
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://blogapp-nine-rose-46.vercel.app"
+    // "https://blogapp-nine-rose-46.vercel.app"
+    "https://blogapplication-b-karthik13s-projects.vercel.app"
   ],
   credentials: true
 }));
