@@ -16,31 +16,24 @@ function CreateEmp() {
 
   //form submit
   const onFormSubmit = async (newEmpObj) => {
-    try {
-      setLoading(true);
-      //make HTTP POST req
-      let res = await fetch(`${api}/emp-api/emps`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newEmpObj),
-      });
+  try {
+    setLoading(true);
 
-      if (res.status === 201) {
-        //navigate to employees component programatically
-        navigate("/list");
-      } else {
-        let errorRes = await res.json();
-        console.log("error responce is ", errorRes);
-        throw new Error(errorRes.reason);
-      }
-    } catch (err) {
-      console.log("err in catch", err);
-      //deal with err
-      setError(err.message);
-    } finally {
-      setLoading(false);
+    let res = await api.post("/emp-api/emps", newEmpObj);
+
+    if (res.status === 201) {
+      navigate("/list");
     }
-  };
+  } catch (err) {
+    console.log("err in catch", err);
+
+    // safer error handling
+    setError(err.response?.data?.reason || err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   if (loading) {
     return <p className="text-center text-4xl">Loading....</p>;

@@ -24,15 +24,16 @@ function ListOfEmps() {
   };
 
 
-  async function getEmps() {
-      let res = await fetch(`${api}/emp-api/emps`,{
-        method: "GET"}
-      );
-      if (res.status === 200) {
-        let resObj = await res.json();
-        setEmps(resObj.payload);
-      }
+ async function getEmps() {
+  try {
+    let res = await api.get("/emp-api/emps");
+    if (res.status === 200) {
+      setEmps(res.data.payload);
     }
+  } catch (err) {
+    console.error(err);
+  }
+}
 
   useEffect(() => {
     getEmps();
