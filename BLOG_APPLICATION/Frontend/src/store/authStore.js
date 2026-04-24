@@ -61,6 +61,15 @@ import { create } from "zustand";
 import axios from "axios";
 import api from "../api/axiosInstance";
 
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+  withCredentials: true,
+});
+
+export default api;
+
 export const useAuth = create((set) => ({
   currentUser: null,
   loading: false,
@@ -72,7 +81,7 @@ export const useAuth = create((set) => ({
       //set loading true
       set({ loading: true, currentUser: null, isAuthenticated: false, error: null });
       //make api call
-      let res = await axios.post("http://localhost:5000/common-api/login", userCred, { withCredentials: true });
+      let res = await api.post("/common-api/login", userCred, { withCredentials: true });
       //update state
       if (res.status === 200) {
         set({
@@ -97,7 +106,7 @@ export const useAuth = create((set) => ({
     try {
       //set loading state
       //make logout api req
-      let res = await axios.get("http://localhost:5000/common-api/logout", { withCredentials: true });
+      let res = await api.get("/common-api/logout", { withCredentials: true });
       //update state
       if (res.status === 200) {
         set({
@@ -120,7 +129,7 @@ export const useAuth = create((set) => ({
   checkAuth: async () => {
     try {
       set({ loading: true });
-      const res = await axios.get("http://localhost:5000/common-api/check-auth", { withCredentials: true });
+      const res = await api.get("/common-api/check-auth", { withCredentials: true });
 
       set({
         currentUser: res.data.payload,
