@@ -8,8 +8,8 @@ function Home() {
   const { counter,changeCounter} = useContext(counterContextObj);
   return (
     <div className='text-center'>
-      <h1 className='font-bond text-5xl mb-4'>Lorem, ipsum.</h1>
-      <p className='text-2xl mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum suscipit adipisci dignissimos, similique voluptas rerum! Praesentium porro unde provident sed qui itaque possimus illum tempora quod similique nihil, inventore error?</p>
+      <h1 className='font-bond text-5xl mb-4'>Welcome to Our Employee Hub</h1>
+      <p className='text-2xl mt-4'>This website is designed to simplify how we manage and access employee information. It acts as a digital repository to securely store, organize, and update the details of our team members. Whether you need to find a colleague's contact information, onboard a new hire, or update employment records, this platform ensures everything is just a click away. </p>
     </div>
   )
 }

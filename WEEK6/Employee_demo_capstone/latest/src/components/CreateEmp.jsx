@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import api from "../api/axiosInstance.js";
 
 function CreateEmp() {
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ function CreateEmp() {
     try {
       setLoading(true);
       //make HTTP POST req
-      let res = await fetch("http://localhost:2000/emp-api/emps", {
+      let res = await fetch(`${api}/emp-api/emps`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newEmpObj),
