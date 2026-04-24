@@ -13,7 +13,7 @@ import {
 import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router";
 import { useState } from "react";
-import axios from 'axios'
+import api from "../api/axiosInstance.js"
 
 function Register() {
   const {
@@ -32,7 +32,7 @@ function Register() {
       //Start loading
       setLoading(true)
       //Make HTTP POST request to create user in backend
-      let res=await axios.post("http://localhost:5000/common-api/users",userObj)
+      let res=await api.post("/common-api/users",userObj)
       if(res.status===201){
         navigate("/login")
       }

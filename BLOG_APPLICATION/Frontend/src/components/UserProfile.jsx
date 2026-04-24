@@ -1,6 +1,6 @@
 import { useAuth } from "../store/authStore";
 import { useNavigate } from "react-router";
-import axios from "axios";
+import api from '../api/axiosInstance.js'
 import { useEffect, useState } from "react";
 
 import {
@@ -26,8 +26,8 @@ function UserProfile() {
     const getArticles = async () => {
       setArticlesLoading(true);
       try {
-        let res = await axios.get(
-          "http://localhost:5000/user-api/articles",
+        let res = await api.get(
+          "/user-api/articles",
           { withCredentials: true }
         );
 
