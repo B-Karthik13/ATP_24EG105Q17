@@ -9,9 +9,19 @@ config();
 const app=exp();
 
 app.use(cors({
-    origin:["http://localhost:5174"],
-    }),
-);
+  origin: (origin, callback) => {
+    if (
+      !origin ||
+      origin === "http://localhost:5173" ||
+      /^https:\/\/.*\.vercel\.app$/.test(origin)
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 
 //use body parser middleware
 app.use(exp.json())
