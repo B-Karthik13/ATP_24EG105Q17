@@ -14,9 +14,12 @@ config()
 const app=exp()
 
 app.use(cors({
-    origin:['http://localhost:5173'],
-    credentials:true
-}),);
+  origin: [
+    "http://localhost:5173",
+    "https://blogapp-nine-rose-46.vercel.app"
+  ],
+  credentials: true
+}));
 
 //body parser middleware
 app.use(exp.json())
@@ -35,7 +38,7 @@ const connectDB=async() => {
         await connect(process.env.DB_URL)
         console.log("DB connected")
         //assign port
-        const port= process.env.PORT  ||5000
+        const port= process.env.PORT || 5000
         app.listen(port,() =>console.log(`Server listening on ${port}...`))
     }
     catch(err)
