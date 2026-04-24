@@ -14,7 +14,7 @@ import {
   emptyStateClass,
   articleStatusActive,
   articleStatusDeleted,
-} from "../styles/common";
+} from "../styles/common.js";
 
 function AuthorArticles() {
   const navigate = useNavigate();

@@ -13,7 +13,7 @@ import {
   submitBtn,
   errorClass,
   loadingClass,
-} from "../styles/common";
+} from "../styles/common.js";
 import { useAuth } from "../store/authStore";
 
 function WriteArticles() {

@@ -1,6 +1,6 @@
 import { NavLink, Outlet, useNavigate } from "react-router";
 import { useAuth } from "../store/authStore";
-import { pageWrapper, navLinkClass, divider } from "../styles/common";
+import { pageWrapper, navLinkClass, divider } from "../styles/common.js";
 
 function AuthorProfile() {
   const currentUser = useAuth((state) => state.currentUser);
