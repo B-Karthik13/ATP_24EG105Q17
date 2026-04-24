@@ -58,7 +58,6 @@ export const useAuth = create((set) => ({
 */
 
 import { create } from "zustand";
-import axios from "axios";
 import api from "../api/axiosInstance";
 
 export const useAuth = create((set) => ({
