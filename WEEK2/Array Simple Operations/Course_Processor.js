@@ -16,7 +16,7 @@ Tasks:
     4. find() the course "react"
     5. findIndex() of "node"
 */
-
+//Online Course Name Processor
 const courses = ["javascript", "react", "node", "mongodb", "express"];
 
 //1.names with length greater than 5

@@ -27,6 +27,7 @@ Tasks:
    5. findIndex() of student "Kiran"
    */
 
+//Student Performance Dashboard   
 const students = [
   { id: 1, name: "Ravi", marks: 78 },
   { id: 2, name: "Anjali", marks: 92 },
@@ -35,7 +36,7 @@ const students = [
   { id: 5, name: "Arjun", marks: 40 }
 ];
 
-//1.students with >=40
+//1. filter() students who passed (marks ≥ 40)
 console.log("students passed:",students.filter(ele=>ele.marks>=40))
 
 //2.Add grade property
@@ -54,11 +55,11 @@ let Students=students.map(ele=>{
 )
 console.log("Student Data:",Students)
 
-//3.average mark
+//3. reduce() to calculate average marks
 console.log("Average Mark:",(students.reduce((acc,ele) => acc+ele.marks,0))/students.length)
 
-//4.student with 92 marks
+//4.find() the student who scored 92
 console.log("Student with 92 Marks:",students.find(ele =>ele.marks==92).name)
 
-//5.Index of Kiran
+//5.findIndex() of student "Kiran"
 console.log("Index of Kiran:",students.findIndex(ele=>ele.name=="Kiran"))

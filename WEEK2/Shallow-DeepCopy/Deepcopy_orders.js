@@ -25,6 +25,7 @@ Hands-On 2: Deep Copy (Isolation & Safety Use Case)
             iii. Verify original object remains unchanged
 */
 
+//DEEPCOPY
 const order = {
   orderId: "ORD1001",
    customer: {
