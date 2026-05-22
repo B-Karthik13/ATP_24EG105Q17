@@ -1,23 +1,43 @@
+# Week 1 — JavaScript Fundamentals
 
-## About
-This folder contains some basic JavaScript programs that I practiced while learning core concepts. The programs focus on simple logic building using conditions, loops, arrays, and functions.
-## Programs Included
-* Finding the largest number (2 numbers and 3 numbers)
-* Working with employee data using arrays of objects
-  * Adding a new employee
-  * Deleting an employee
-  * Updating marks
-* Finding sum of elements in an array
-* Searching an element in an array
-* Finding the smallest number in an array
+## Overview
+
+Introduction to core JavaScript concepts including conditionals, loops, arrays, and functions. All exercises are standalone `.js` scripts intended to be run with Node.js.
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `FindBigOfTwo.js` | Finds the larger of two numbers using an if/else statement |
+| `FindBigOfThree.js` | Finds the largest among three variables using chained conditionals |
+| `SumOfArray.js` | Iterates over a hardcoded array and sums its elements using a `for` loop |
+| `SmallestInArray.js` | Finds the smallest value in an array |
+| `Splice.js` | Demonstrates the `Array.splice()` method |
+| `FuncAvgMarks.js` | Function that accepts an array and returns the average of its values |
+| `FuncBiggest.js` | Function that returns the largest number from an array |
+| `FuncSearchIndex.js` | Function that searches for an element and returns its index |
+| `FuncSumOfArray.js` | Function that receives an array as an argument and returns the sum |
+
 ## Concepts Covered
-* if-else statements
-* for loops
-* functions
-* arrays and objects
-* basic array methods like splice(), find(), findIndex()
+
+- Variables and data types
+- Conditional statements (`if`, `else if`, `else`)
+- `for` loops and array iteration
+- Array methods (`splice`, indexing)
+- Function definitions and return values
+- Passing arrays as function arguments
+
 ## How to Run
-1. Make sure Node.js is installed
-2. Save the file as `app.js`
-3. Run the program using:
-   node app.js
+
+```bash
+node <filename>.js
+```
+
+Example:
+```bash
+node FuncSumOfArray.js
+```
+
+## Prerequisites
+
+- Node.js installed
