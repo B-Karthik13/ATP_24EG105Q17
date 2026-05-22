@@ -1,16 +1,130 @@
-# React + Vite
+# User Card App using React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple User Card Application built using React.  
+This project displays user information inside reusable card components with a clean UI design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Display User Information
+- Reusable React Components
+- Dynamic Data Rendering using Props
+- Responsive Card Layout
+- Beginner-friendly React Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React JS
+- JavaScript (ES6)
+- CSS
+- Vite
+
+---
+
+## Concepts Used
+
+### React Components
+
+The application is divided into reusable components for better code organization and reusability.
+
+### Props
+
+Props are used to pass user data from parent component to child component.
+
+Example:
+
+```javascript
+<UserCard 
+  name="Karthik"
+  role="Frontend Developer"
+  location="Hyderabad"
+/>
+```
+
+---
+
+## Project Structure
+
+```bash
+src/
+│
+├── components/
+│   └── UserCard.jsx
+│
+├── App.jsx
+├── App.css
+├── main.jsx
+```
+
+---
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone <repository-link>
+```
+
+### Navigate to Project Folder
+
+```bash
+cd project-folder
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+## Output
+
+The application displays:
+
+- User Name
+- User Role
+- User Location
+- User Profile Card UI
+
+Each card is dynamically rendered using React props.
+
+---
+
+## Learning Outcome
+
+Through this project, you can learn:
+
+- React Functional Components
+- Props in React
+- Component Reusability
+- JSX
+- Styling Components
+- Dynamic Rendering
+
+---
+
+## Future Enhancements
+
+- Add Profile Images
+- Add Social Media Links
+- Add Dark Mode
+- Fetch User Data from API
+- Add Multiple User Cards
+
+---
+
+## Author
+
+Karthik
