@@ -133,23 +133,22 @@ function App(){
 
   //return react element
   return( 
-   <div className='m-15'>
-     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
-      {
-        products.map((product)=>(<Product productObj = {product} key={product.id}/>)
-      )}
-     </div>
-     </div>
+  //  <div className='m-15'>
+  //    <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
+  //     {
+  //       products.map((product)=>(<Product productObj = {product} key={product.id}/>)
+  //     )}
+  //    </div>
+  //    </div>
   
 
-   /*<div>
+   <div>
       <Navbar />
       
       <UsersList />
       
       <Footer />
    </div>  
-  */
   )
 }
 
