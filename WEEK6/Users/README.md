@@ -1,16 +1,133 @@
-# React + Vite
+# Users List App using React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Users List Application built using React.  
+This project displays multiple users dynamically using reusable React components and array rendering methods.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Display Multiple Users
+- Dynamic Rendering using `map()`
+- Reusable React Components
+- Responsive User List Layout
+- Beginner-friendly React Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React JS
+- JavaScript (ES6)
+- CSS
+- Vite
+
+---
+
+## Concepts Used
+
+### Array Mapping
+
+The `map()` function is used to render multiple user components dynamically.
+
+Example:
+
+```javascript
+users.map((user) => (
+  <User 
+    key={user.id}
+    name={user.name}
+    role={user.role}
+  />
+))
+```
+
+### Props
+
+Props are used to pass user data from parent component to child component.
+
+---
+
+## Project Structure
+
+```bash
+src/
+│
+├── components/
+│   ├── User.jsx
+│   └── UserList.jsx
+│
+├── App.jsx
+├── App.css
+├── main.jsx
+```
+
+---
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone <repository-link>
+```
+
+### Navigate to Project Folder
+
+```bash
+cd project-folder
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+## Output
+
+The application displays:
+
+- List of Users
+- User Names
+- User Roles
+- Dynamic User Components
+
+Users are rendered dynamically from an array of objects.
+
+---
+
+## Learning Outcome
+
+Through this project, you can learn:
+
+- React Functional Components
+- Props in React
+- Array Mapping using `map()`
+- Dynamic Rendering
+- Component Reusability
+- JSX Rendering
+
+---
+
+## Future Enhancements
+
+- Add Search Functionality
+- Add User Profile Images
+- Fetch Users from API
+- Add Pagination
+- Add User Details Page
+
+---
+
+## Author
+
+Karthik
