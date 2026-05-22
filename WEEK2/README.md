@@ -125,6 +125,3 @@ node -v
 
 ---
 
-# 👨‍💻 Author
-
-**Your Name**
