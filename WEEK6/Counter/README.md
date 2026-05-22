@@ -1,16 +1,120 @@
-# React + Vite
+# Counter App using React useState
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Counter Application built using React and the `useState` Hook.  
+This project demonstrates state management in React functional components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Increment Counter
+- Decrement Counter
+- Reset Counter
+- Dynamic UI Update using React State
+- Beginner-friendly React Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React JS
+- JavaScript (ES6)
+- CSS
+- Vite
+
+---
+
+## Concepts Used
+
+### useState Hook
+
+The `useState` Hook is used to manage the counter state inside the functional component.
+
+Example:
+
+```javascript
+const [count, setCount] = useState(0);
+```
+
+- `count` → stores the current counter value
+- `setCount` → updates the counter value
+
+---
+
+## Project Structure
+
+```bash
+src/
+│
+├── App.jsx
+├── App.css
+├── main.jsx
+```
+
+---
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone <repository-link>
+```
+
+### Navigate to Project Folder
+
+```bash
+cd project-folder
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+## Output
+
+The application displays:
+
+- Counter Value
+- Increment Button
+- Decrement Button
+- Reset Button
+
+The counter updates instantly whenever buttons are clicked.
+
+---
+
+## Learning Outcome
+
+Through this project, you can learn:
+
+- React Functional Components
+- React Hooks
+- State Management
+- Event Handling
+- Component Rendering
+
+---
+
+## Future Enhancements
+
+- Add Dark Mode
+- Add Minimum/Maximum Limits
+- Add Custom Step Increment
+- Store Counter using Local Storage
+
+---
+
+## Author
+
+Karthik
